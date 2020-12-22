@@ -29,7 +29,7 @@ class Worker(QThread):
 			# 4 xrp_mxn
 			# 5 ltc_btc
 			# 6 ltc_mxn
-			# 7bch_btc
+			# 7 bch_btc
 			# 8 bch_mxn
 			# 9 tusd_btc
 			# 10 tusd_mxn
@@ -63,6 +63,10 @@ class Worker(QThread):
 				'ether': {
 					'book': json_response['payload'][2]['book'],
 					'last': json_response['payload'][2]['last']
+				},
+				'gnt_btc': {
+					'book': json_response['payload'][13]['book'],
+					'last': json_response['payload'][13]['last']
 				}
 			})
 
